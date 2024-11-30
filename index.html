@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart with google</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h2>Music Preferences</h2>
+        <h4>Muestra una grafica con tus preferencias musicales</h4>
+        <p>Del 0 al 5, ¿Con que frecuencia escuchas estos generos musicales?</p>
+      </div>
+      <div class="column column-50">
+        <form id="myForm">
+          <fieldset>
+            <label for="rock">Rock</label>
+            <input type="number" name="rock" id="rock" min="0" max="5">
+            <label for="pop">Pop</label>
+            <input type="number" name="pop" id="pop" min="0" max="5">
+            <label for="electronica">Electrónica</label>
+            <input type="number" name="electronica" id="electronica" min="0" max="5">
+            <label for="regueton">Reguetón</label>
+            <input type="number" name="regueton" id="regueton" min="0" max="5">
+            <label for="trap">Trap</label>
+            <input type="number" name="trap" id="trap" min="0" max="5">
+            <input class="button-primary" type="submit" value="Send">
+          </fieldset>
+        </form>
+      </div>
+      <div class="column"></div>
+    </div>
+  </div>
+  <div class="animate__animated" id="chart_div"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="module" src="src/chart.js"></script>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
